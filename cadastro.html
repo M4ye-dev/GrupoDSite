@@ -193,6 +193,14 @@
       }
 
       if (valid) {
+        // Armazenar dados no LocalStorage
+        const usuario = {
+          nome: nome.value,
+          email: email.value,
+          senha: senha.value
+        };
+        localStorage.setItem('usuario', JSON.stringify(usuario));
+
         alert('Cadastro realizado com sucesso!');
         formCadastro.reset();
       }
